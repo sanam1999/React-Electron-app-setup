@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Cross-platform desktop app using Electron and React",
   "author": "Sanam Shrestha",
-  "main": "dist-electron/main.js",
+  "main": "src/electron/main.js",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,8 +11,7 @@
     "dev:react": "vite",
     "dev:electron": "cross-env NODE_ENV=development electron .",
 
-  "build": "vite build && npm run build:electron &&  npm install -g react-devtools",
-  "build:electron": "mkdir -p dist-electron && cp src/electron/*.js dist-electron/",
+  "build": "vite build",
   "lint": "eslint .",
   "preview": "vite preview",
   "dist:mac": "npm run build && electron-builder --mac --arm64",
@@ -45,7 +44,7 @@
       "output": "release"
     },
     "files": [
-      "dist-electron/**/*",
+      "src/electron/**/*",
       "dist-react/**/*",
       "node_modules/**/*",
       "package.json"

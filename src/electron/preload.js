@@ -1,5 +1,6 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electron', {
-  // Expose APIs here if needed
+  getSimpleObject: () => ipcRenderer.invoke('getSimpleObject'),
+  getName: () => ipcRenderer.invoke('getName'),
 });
