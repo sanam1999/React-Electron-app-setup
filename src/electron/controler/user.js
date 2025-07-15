@@ -9,6 +9,6 @@ export function registerIpcHandlers() {
     };
   });
 
-  ipcMainHandle('getName', () =>  'Sanam Shrestha'
+  ipcMainHandle('getName', () =>  'Sanam fkjsd'
     );
 }
